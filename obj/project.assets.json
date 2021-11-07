@@ -454,19 +454,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\losan\\.nuget\\packages\\": {}
+    "C:\\Users\\rafae\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\ProjetoN2.csproj",
+      "projectUniqueName": "C:\\Users\\rafae\\projeto_chamada\\ProjetoN2.csproj",
       "projectName": "ProjetoN2",
-      "projectPath": "C:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\ProjetoN2.csproj",
-      "packagesPath": "C:\\Users\\losan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\obj\\",
+      "projectPath": "C:\\Users\\rafae\\projeto_chamada\\ProjetoN2.csproj",
+      "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rafae\\projeto_chamada\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\losan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -478,6 +483,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -489,6 +495,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "System.Data.SqlClient": {
             "target": "Package",
@@ -513,7 +520,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
