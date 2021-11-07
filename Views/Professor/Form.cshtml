@@ -1,0 +1,13 @@
+@model ProjetoN2.Models.ProfessorViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form asp-action="Save" asp-controller="Professor">
+        <input type="hidden" asp-for="Id">
+        <input asp-for="Nome">
+
+        <button>Salvar</button>
+    </form>
+</div>
