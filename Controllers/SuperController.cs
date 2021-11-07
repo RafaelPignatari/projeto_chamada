@@ -10,7 +10,7 @@ using ProjetoN2.Models;
 
 namespace ProjetoN2.Controllers
 {
-    public abstract class SuperController<T> : Controller where T : SuperViewModel
+    public class SuperController<T> : Controller where T : SuperViewModel
     {
         protected SuperDAO<T> DAO { get; set; }
         protected string IndexViewName { get; set; } = "Index";
@@ -103,6 +103,9 @@ namespace ProjetoN2.Controllers
             }
         }
 
-        protected abstract void ValidateModel(T model);
+        protected virtual void ValidateModel(T model)
+        {
+            return;
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace ProjetoN2.DAO
             SetTableName();
         }
         protected string Table { get; set; }
-        protected string SpSelectName { get; set; }
+        protected string SpSelectName { get; set; } = "sp_select";
 
         protected abstract SqlParameter[] SetParameters(T model);
         protected abstract T SetModel(DataRow row);
