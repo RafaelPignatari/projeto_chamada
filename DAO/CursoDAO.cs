@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using ProjetoN2.Enums;
@@ -13,19 +14,22 @@ namespace ProjetoN2.DAO
             CursoViewModel cursoViewModel = new CursoViewModel();
             cursoViewModel.Id = Convert.ToInt32(row["curso_id"]);
             cursoViewModel.Nome = row["curso_nome"].ToString();
-            cursoViewModel.Periodo = (EPeriodo)Convert.ToInt32(row["curso_id"]);
+            cursoViewModel.Periodo = (EPeriodo)Convert.ToInt32(row["curso_periodo"]);
             
             return cursoViewModel;
         }
 
         protected override SqlParameter[] SetParameters(CursoViewModel model)
         {
-            SqlParameter[] parameters = new SqlParameter[3];
-            parameters[0] = new SqlParameter("id", model.Id);
-            parameters[1] = new SqlParameter("nome", model.Nome);
-            parameters[2] = new SqlParameter("periodo", (int)model.Periodo);
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            if(model.Id != 0)
+            {
+                parameters.Add(new SqlParameter("id",model.Id));
+            }
+            parameters.Add(new SqlParameter("nome", model.Nome));
+            parameters.Add(new SqlParameter("periodo", (int)model.Periodo));
 
-            return parameters;
+            return parameters.ToArray();
         }
 
         protected override void SetTableName()

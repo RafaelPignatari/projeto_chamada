@@ -28,7 +28,7 @@ namespace ProjetoN2.Controllers
                 return View("Error", new ErrorViewModel(e.ToString()));
             }
         }
-        public virtual void PrepareView()
+        protected virtual void PrepareView()
         {
             return;
         }

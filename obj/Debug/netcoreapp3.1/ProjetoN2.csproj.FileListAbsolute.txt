@@ -43,3 +43,5 @@ C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\ProjetoN2.pdb
 C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\ProjetoN2.genruntimeconfig.cache
 C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Professor\Form.cshtml.g.cs
 C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Professor\Index.cshtml.g.cs
+C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Curso\Form.cshtml.g.cs
+C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Curso\Index.cshtml.g.cs
