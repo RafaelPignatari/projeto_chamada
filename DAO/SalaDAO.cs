@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using ProjetoN2.Models;
@@ -18,11 +19,14 @@ namespace ProjetoN2.DAO
 
         protected override SqlParameter[] SetParameters(SalaViewModel model)
         {
-            SqlParameter[] parameters = new SqlParameter[3];
-            parameters[0] = new SqlParameter("id", model.Id);
-            parameters[1] = new SqlParameter("capacidade", model.Capacidade);
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            if (model.Id != 0)
+            {
+                parameters.Add(new SqlParameter("id", model.Id));
+            }
+            parameters.Add(new SqlParameter("capacidade", model.Capacidade));
 
-            return parameters;
+            return parameters.ToArray();
         }
 
         protected override void SetTableName()
