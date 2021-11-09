@@ -24,6 +24,11 @@ namespace ProjetoN2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddSession( options => {
+                options.Cookie.IsEssential = true;
+                options.IdleTimeout = TimeSpan.FromSeconds(1000000);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +50,8 @@ namespace ProjetoN2
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
