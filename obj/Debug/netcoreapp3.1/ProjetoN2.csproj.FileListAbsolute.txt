@@ -53,3 +53,5 @@ C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\A
 C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Aluno\Index.cshtml.g.cs
 C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Materia\Form.cshtml.g.cs
 C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Materia\Index.cshtml.g.cs
+C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Aula\Form.cshtml.g.cs
+C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Aula\Index.cshtml.g.cs

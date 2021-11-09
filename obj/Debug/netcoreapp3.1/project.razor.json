@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Materia\\Form.cshtml",
+      "TargetPath": "Views\\Materia\\Form.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Sala\\Index.cshtml",
       "TargetPath": "Views\\Sala\\Index.cshtml",
       "FileKind": "mvc"
@@ -14459,6 +14464,11 @@
     {
       "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Professor\\Form.cshtml",
       "TargetPath": "Views\\Professor\\Form.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Materia\\Index.cshtml",
+      "TargetPath": "Views\\Materia\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

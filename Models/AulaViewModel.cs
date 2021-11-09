@@ -5,8 +5,10 @@ namespace ProjetoN2.Models
     public class AulaViewModel : SuperViewModel
     {
         public DateTime Data { get; set; }
-        public MateriaViewModel Materia { get; set; }
-        public TurmaViewModel Turma { get; set; }
-        public SalaViewModel Sala { get; set; }
+        public int MateriaId { get; set; }
+        public string MateriaNome { get; set; }
+        public int TurmaId { get; set; }
+        public string TurmaNome { get; set; }
+        public int SalaId { get; set; }
     }
 }
