@@ -14422,13 +14422,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Aluno\\Form.cshtml",
+      "TargetPath": "Views\\Aluno\\Form.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Aluno copy\\Index.cshtml",
+      "TargetPath": "Views\\Aluno copy\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Aluno\\Index.cshtml",
+      "TargetPath": "Views\\Aluno\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Curso\\Form.cshtml",
       "TargetPath": "Views\\Curso\\Form.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Aluno copy\\Form.cshtml",
+      "TargetPath": "Views\\Aluno copy\\Form.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using ProjetoN2.Models;
@@ -32,11 +33,15 @@ namespace ProjetoN2.DAO
 
         protected override SqlParameter[] SetParameters(TurmaViewModel model)
         {
-            SqlParameter[] parameters = new SqlParameter[2];
-            parameters[0] = new SqlParameter("semestre", model.Semestre);
-            parameters[1] = new SqlParameter("curso_id", model.CursoId);
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            if(model.Id != 0)
+            {
+                parameters.Add(new SqlParameter("id",model.Id));
+            }
+            parameters.Add(new SqlParameter("semestre", model.Semestre));
+            parameters.Add(new SqlParameter("curso_id", model.CursoId));
 
-            return parameters;
+            return parameters.ToArray();
         }
 
         protected override void SetTableName()

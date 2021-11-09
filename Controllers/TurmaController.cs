@@ -21,7 +21,7 @@ namespace ProjetoN2.Controllers
 
             if(((TurmaDAO)DAO).cursoDAO.SelectById(model.CursoId) == null)
             {
-                ModelState.AddModelError("Curso", "Curso não existe");
+                ModelState.AddModelError("CursoId", "Curso não existe");
             }
         }
 

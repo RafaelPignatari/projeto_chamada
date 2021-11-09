@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using ProjetoN2.Models;
@@ -7,8 +8,8 @@ namespace ProjetoN2.DAO
 {
     public class MateriaDAO : SuperDAO<MateriaViewModel>
     {
-        private ProfessorDAO professorDAO;
-        private CursoDAO cursoDAO;
+        public ProfessorDAO professorDAO;
+        public CursoDAO cursoDAO;
 
         public MateriaDAO()
         {
@@ -20,26 +21,41 @@ namespace ProjetoN2.DAO
             MateriaViewModel materiaViewModel = new MateriaViewModel();
             materiaViewModel.Id = Convert.ToInt32(row["materia_id"]);
             materiaViewModel.Nome = row["materia_nome"].ToString();
-            materiaViewModel.Professor = professorDAO.SelectById(Convert.ToInt32(row["professor_id"]));
-            materiaViewModel.Curso = cursoDAO.SelectById(Convert.ToInt32(row["curso_id"]));
+
+            if(row.Table.Columns.Contains("professor_nome"))
+            {
+                materiaViewModel.ProfessorNome = row["professor_nome"].ToString();
+                materiaViewModel.CursoNome = row["curso_nome"].ToString();
+            }
+            else
+            {
+                materiaViewModel.ProfessorId = Convert.ToInt32(row["professor_id"]);
+                materiaViewModel.CursoId = Convert.ToInt32(row["curso_id"]);
+            }
+
+            
 
             return materiaViewModel;
         }
 
         protected override SqlParameter[] SetParameters(MateriaViewModel model)
         {
-            SqlParameter[] parameters = new SqlParameter[3];
-            parameters[0] = new SqlParameter("id", model.Id);
-            parameters[1] = new SqlParameter("nome", model.Nome);
-            parameters[2] = new SqlParameter("professor_id", model.Professor.Id);
-            parameters[3] = new SqlParameter("curso_id", model.Curso.Id);
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            if(model.Id != 0)
+            {
+                parameters.Add(new SqlParameter("id",model.Id));
+            }
+            parameters.Add(new SqlParameter("nome", model.Nome));
+            parameters.Add(new SqlParameter("professor_id", model.ProfessorId));
+            parameters.Add(new SqlParameter("curso_id", model.CursoId));
 
-            return parameters;
+            return parameters.ToArray();
         }
 
         protected override void SetTableName()
         {
             Table = "materia";
+            SpSelectName = SpSelectName + "_" + Table;
         }
     }
 }

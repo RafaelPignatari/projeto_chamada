@@ -49,3 +49,7 @@ C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\ProjetoN2.pdb
 C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\ProjetoN2.genruntimeconfig.cache
 C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Turma\Form.cshtml.g.cs
 C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Turma\Index.cshtml.g.cs
+C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Aluno\Form.cshtml.g.cs
+C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Aluno\Index.cshtml.g.cs
+C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Materia\Form.cshtml.g.cs
+C:\Users\losan\Desktop\Aulas\EC5\ProjetoN2\obj\Debug\netcoreapp3.1\Razor\Views\Materia\Index.cshtml.g.cs

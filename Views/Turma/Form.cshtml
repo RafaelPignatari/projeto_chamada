@@ -13,7 +13,7 @@
         <br>
 
         <label asp-for="Semestre"></label>
-        <input class="form-control" asp-for="Semestre">
+        <input min="1" max="10" class="form-control" asp-for="Semestre">
         <span class="text-danger" asp-validation-for="Semestre"></span>
         <br>
 

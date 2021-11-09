@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using ProjetoN2.Models;
@@ -7,7 +8,7 @@ namespace ProjetoN2.DAO
 {
     public class AlunoDAO : SuperDAO<AlunoViewModel>
     {
-        private TurmaDAO turmaDAO;
+        public TurmaDAO turmaDAO;
         public AlunoDAO()
         {
             turmaDAO = new TurmaDAO();
@@ -17,24 +18,35 @@ namespace ProjetoN2.DAO
             AlunoViewModel alunoViewModel = new AlunoViewModel();
             alunoViewModel.Id = Convert.ToInt32(row["aluno_id"]);
             alunoViewModel.Nome = row["aluno_nome"].ToString();
-            alunoViewModel.Turma = turmaDAO.SelectById(Convert.ToInt32(row["turma_id"]));
+            if(row.Table.Columns.Contains("turma_nome"))
+            {
+                alunoViewModel.TurmaNome = row["turma_nome"].ToString();
+            }
+            else
+            {
+                alunoViewModel.TurmaId = Convert.ToInt32(row["turma_id"]);
+            }
 
             return alunoViewModel;
         }
 
         protected override SqlParameter[] SetParameters(AlunoViewModel model)
         {
-            SqlParameter[] parameters = new SqlParameter[3];
-            parameters[0] = new SqlParameter("id", model.Id);
-            parameters[1] = new SqlParameter("nome", model.Nome);
-            parameters[2] = new SqlParameter("turma_id", model.Turma.Id);
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            if(model.Id != 0)
+            {
+                parameters.Add(new SqlParameter("id", model.Id));
+            }
+            parameters.Add(new SqlParameter("nome", model.Nome));
+            parameters.Add(new SqlParameter("turma_id", model.TurmaId));
 
-            return parameters;
+            return parameters.ToArray();
         }
 
         protected override void SetTableName()
         {
             Table = "aluno";
+            SpSelectName = SpSelectName + "_" + Table;
         }
     }
 }

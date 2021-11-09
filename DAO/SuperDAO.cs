@@ -59,7 +59,7 @@ namespace ProjetoN2.DAO
                 new SqlParameter("tabela", Table)
             };
             var dataSet = HelperDAO.ExecuteProcedureSelect("sp_select_by_id", parameters);
-            return SetModel(dataSet.Rows[0]);
+            return dataSet.Rows.Count != 0 ? SetModel(dataSet.Rows[0]) : null;
         }
 
         
