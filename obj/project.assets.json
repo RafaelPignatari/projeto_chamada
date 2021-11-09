@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\ProjetoN2.csproj",
+      "projectUniqueName": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\ProjetoN2.csproj",
       "projectName": "ProjetoN2",
-      "projectPath": "C:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\ProjetoN2.csproj",
+      "projectPath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\ProjetoN2.csproj",
       "packagesPath": "C:\\Users\\losan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\obj\\",
+      "outputPath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\losan\\AppData\\Roaming\\NuGet\\NuGet.Config",

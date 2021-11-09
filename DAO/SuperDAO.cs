@@ -38,11 +38,16 @@ namespace ProjetoN2.DAO
         }
         public virtual List<T> SelectAll()
         {
-            var parameters = new SqlParameter[]
+            SqlParameter[] parameters = null;
+            if(SpSelectName == "sp_select")
             {
-                new SqlParameter("tabela", Table),
-                new SqlParameter("ordem", "1")
-            };
+                parameters = new SqlParameter[]
+                {
+                    new SqlParameter("tabela", Table),
+                    new SqlParameter("ordem", "1")
+                };
+            }
+            
             var dataSet = HelperDAO.ExecuteProcedureSelect(SpSelectName, parameters);
             return dataSet.AsEnumerable().Select(row => SetModel(row)).ToList();
         }

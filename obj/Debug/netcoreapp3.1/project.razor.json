@@ -14412,6 +14412,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Sala\\Index.cshtml",
+      "TargetPath": "Views\\Sala\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Sala\\Form.cshtml",
+      "TargetPath": "Views\\Sala\\Form.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -14432,6 +14442,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Turma\\Index.cshtml",
+      "TargetPath": "Views\\Turma\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Curso\\Index.cshtml",
       "TargetPath": "Views\\Curso\\Index.cshtml",
       "FileKind": "mvc"
@@ -14449,6 +14464,11 @@
     {
       "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\losan\\Desktop\\Aulas\\EC5\\ProjetoN2\\Views\\Turma\\Form.cshtml",
+      "TargetPath": "Views\\Turma\\Form.cshtml",
       "FileKind": "mvc"
     },
     {

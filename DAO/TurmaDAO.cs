@@ -7,7 +7,7 @@ namespace ProjetoN2.DAO
 {
     public class TurmaDAO : SuperDAO<TurmaViewModel>
     {
-        private CursoDAO cursoDAO;
+        public CursoDAO cursoDAO;
 
         public TurmaDAO()
         {
@@ -18,17 +18,23 @@ namespace ProjetoN2.DAO
             TurmaViewModel turmaViewModel = new TurmaViewModel();
             turmaViewModel.Id = Convert.ToInt32(row["turma_id"]);
             turmaViewModel.Semestre = Convert.ToInt32(row["turma_semestre"]);
-            turmaViewModel.Curso = cursoDAO.SelectById(Convert.ToInt32(row["turma_semestre"]));
+            if(row.Table.Columns.Contains("curso_nome"))
+            {
+                turmaViewModel.CursoNome = row["curso_nome"].ToString();
+            }
+            else
+            {
+                turmaViewModel.CursoId = Convert.ToInt32(row["curso_id"]);
+            }
 
             return turmaViewModel;
         }
 
         protected override SqlParameter[] SetParameters(TurmaViewModel model)
         {
-            SqlParameter[] parameters = new SqlParameter[3];
-            parameters[0] = new SqlParameter("id", model.Id);
-            parameters[1] = new SqlParameter("semestre", model.Semestre);
-            parameters[2] = new SqlParameter("curso_id", model.Curso.Id);
+            SqlParameter[] parameters = new SqlParameter[2];
+            parameters[0] = new SqlParameter("semestre", model.Semestre);
+            parameters[1] = new SqlParameter("curso_id", model.CursoId);
 
             return parameters;
         }
@@ -36,6 +42,7 @@ namespace ProjetoN2.DAO
         protected override void SetTableName()
         {
             Table = "turma";
+            SpSelectName = SpSelectName + "_" + Table;
         }
     }
 }
