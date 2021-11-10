@@ -6,7 +6,7 @@ namespace ProjetoN2.DAO
     {
         public static SqlConnection GetConnection()
         {
-            string connectionString = "Data Source=LAPTOP-OKNC9GE8\\SQLEXPRESS; Database=volareN2; integrated security=true";
+            string connectionString = "Data Source=tcp:DESKTOP-S82QJ10; DATABASE=volareN2; user id=sa; password=123456";
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
             return connection;
